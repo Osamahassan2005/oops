@@ -1,16 +1,14 @@
-import inquirer from "inquirer";
-import chalk from "chalk";
-let answers = await inquirer.prompt([
-    {
-        type: 'input',
-        name: 'name',
-        message: chalk.blue('What is your name?')
-    },
-    {
-        type: 'list',
-        name: 'color',
-        message: chalk.green('Choose your favorite color:'),
-        choices: ['Red', 'Green', 'Blue']
-    }
-]);
-console.log((`Hello, ${answers.name}! Your favorite color is ${answers.color}.`));
+// Importing the functions from the biryani module
+import { prepareRice, prepareChicken, mixRiceAndChicken, serveBiryani } from './module.js';
+let biryaniRecipe = {
+    prepareRice,
+    prepareChicken,
+    mixRiceAndChicken,
+    serveBiryani
+};
+// Alternatively, using the recipe object
+console.log("\nUsing the recipe object:");
+biryaniRecipe.prepareRice();
+biryaniRecipe.prepareChicken();
+biryaniRecipe.mixRiceAndChicken();
+biryaniRecipe.serveBiryani();

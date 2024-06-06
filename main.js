@@ -1,14 +1,25 @@
-// Importing the functions from the biryani module
-import { prepareRice, prepareChicken, mixRiceAndChicken, serveBiryani } from './module.js';
-let biryaniRecipe = {
-    prepareRice,
-    prepareChicken,
-    mixRiceAndChicken,
-    serveBiryani
+//........QNO 47
+let laptops = [
+    { make: "lenovo", model: "e545", year: 2022 },
+    { make: "Apple", model: "MacBook Pro", year: 2020 },
+    { make: "HP", model: "core i7", year: 2024 },
+];
+let [laptop1, laptop2] = laptops;
+console.log(laptop1);
+console.log(laptop2);
+//.....QNO 46
+let laptop = {
+    make: "Dell",
+    model: "New Elite Series",
+    year: 2024,
+    describe: function () {
+        console.log(`This laptop is a ${this.year} ${this.make} ${this.model}.`);
+    },
 };
-// Alternatively, using the recipe object
-console.log("\nUsing the recipe object:");
-biryaniRecipe.prepareRice();
-biryaniRecipe.prepareChicken();
-biryaniRecipe.mixRiceAndChicken();
-biryaniRecipe.serveBiryani();
+laptop.describe();
+//.....QNO 48
+let pricesSet1 = [1200, 1500, 1100];
+let pricesSet2 = [1000, 1300, 1600];
+let combinedPrices = [...pricesSet1, ...pricesSet2].sort((a, b) => a - b);
+console.log(combinedPrices);
+export {};

@@ -1,25 +1,20 @@
-//........QNO 47
-let laptops = [
-    { make: "lenovo", model: "e545", year: 2022 },
-    { make: "Apple", model: "MacBook Pro", year: 2020 },
-    { make: "HP", model: "core i7", year: 2024 },
-];
-let [laptop1, laptop2] = laptops;
-console.log(laptop1);
-console.log(laptop2);
-//.....QNO 46
-let laptop = {
-    make: "Dell",
-    model: "New Elite Series",
-    year: 2024,
-    describe: function () {
-        console.log(`This laptop is a ${this.year} ${this.make} ${this.model}.`);
-    },
-};
-laptop.describe();
-//.....QNO 48
-let pricesSet1 = [1200, 1500, 1100];
-let pricesSet2 = [1000, 1300, 1600];
-let combinedPrices = [...pricesSet1, ...pricesSet2].sort((a, b) => a - b);
-console.log(combinedPrices);
+//....AS # 1
+//Install Node.js, TypeScript and VS Code on your computer.
+//..... AS # 2
+let personName = "osama";
+//console.log(`Hello ${personName}, would you like to learn some typescipt today?`)
+//......AS # 3
+//console.log("lowercase:"+ personName.toLowerCase())
+//console.log("uppercase:"+ personName.toUpperCase())
+let titleCase = personName[0].toUpperCase() + personName.slice(1).toLowerCase();
+//console.log("titlecase:"+ titleCase)
+//......AS # 4
+let famousPerson = `Dr Abdul Qadeer khan once said,"Pakistan's nuclear program is a symbol of our national 
+resolve and a guarantor of our national security."`;
+//console.log(famousPerson)
+//.....AS # 5 
+let famousPersonName = "Dr Abdul Qadeer khan";
+let message = `${famousPersonName} once said ,"Pakistan's nuclear program is a symbol of our national
+ resolve and a guarantor of our national security."`;
+console.log(message);
 export {};

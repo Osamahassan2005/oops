@@ -28,12 +28,10 @@ Book.displayinstanceCount()
 
 class EBook extends Book {
         fileSize:number;
-
     constructor(title:string, author:string, fileSize:number) {
         super(title, author);
         this.fileSize = fileSize;
     }
-
     displayDetails() {
         console.log(`Title: ${this.title}, Author: ${this.author}, File Size: ${this.fileSize}MB`);
     }

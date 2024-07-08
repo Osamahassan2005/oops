@@ -1,20 +1,38 @@
-//....AS # 1
-//Install Node.js, TypeScript and VS Code on your computer.
-//..... AS # 2
-let personName = "osama";
-console.log(`Hello ${personName}, would you like to learn some typescipt today?`);
-//......AS # 3
-console.log("lowercase:" + personName.toLowerCase());
-console.log("uppercase:" + personName.toUpperCase());
-let titleCase = personName[0].toUpperCase() + personName.slice(1).toLowerCase();
-console.log("titlecase:" + titleCase);
-//......AS # 4
-let famousPerson = `Dr Abdul Qadeer khan once said,"Pakistan's nuclear program is a symbol of our national 
-resolve and a guarantor of our national security."`;
-console.log(famousPerson);
-//.....AS # 5 
-let famousPersonName = "Dr Abdul Qadeer khan";
-let message = `${famousPersonName} once said ,"Pakistan's nuclear program is a symbol of our national
- resolve and a guarantor of our national security."`;
-console.log(message);
+class Book {
+    static instanceCount = 0;
+    title;
+    author;
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+        Book.instanceCount++;
+    }
+    displayDetails() {
+        console.log(`Title: ${this.title}, Author: ${this.author}`);
+    }
+    ;
+    static displayinstanceCount() {
+        console.log(`total instances created:${Book.instanceCount}`);
+    }
+}
+// create an instances of book
+let book1 = new Book("the book of healing", "ibn e sina");
+let book2 = new Book("the book of knowledge", "al khwarizmi");
+book1.displayDetails();
+book2.displayDetails();
+Book.displayinstanceCount();
+// instance of Ebook
+class EBook extends Book {
+    fileSize;
+    constructor(title, author, fileSize) {
+        super(title, author);
+        this.fileSize = fileSize;
+    }
+    displayDetails() {
+        console.log(`Title: ${this.title}, Author: ${this.author}, File Size: ${this.fileSize}MB`);
+    }
+}
+let myEBook = new EBook("The niche of lights", "al ghazali", 5);
+myEBook.displayDetails();
+Book.displayinstanceCount();
 export {};
